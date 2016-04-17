@@ -9,10 +9,11 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<BorderPane style="-fx-background-color: #666;" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.polito.tdp.ruzzle.controller.RuzzleController">
+<BorderPane style="-fx-background-color: #eee;" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.polito.tdp.ruzzle.controller.RuzzleController">
    <left>
-      <GridPane alignment="CENTER" prefHeight="208.0" prefWidth="251.0" style="-fx-background-color: #666;" BorderPane.alignment="CENTER">
+      <GridPane alignment="CENTER" prefHeight="208.0" prefWidth="200.0" style="-fx-background-color: #EEE; -fx-border-color: #AAA; -fx-padding: 10px; -fx-border-width: 2px; -fx-border-radius: 10px;" BorderPane.alignment="CENTER">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -26,22 +27,28 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Label fx:id="lbl2" contentDisplay="CENTER" style="-fx-background-color: green; -fx-label-padding: 10px;" text="C" GridPane.columnIndex="2" />
-            <Label fx:id="lbl0" alignment="CENTER" contentDisplay="CENTER" style="-fx-background-color: green; -fx-label-padding: 10px; -fx-pref-width: 20px;" text="A" />
-            <Label fx:id="lbl1" contentDisplay="CENTER" style="-fx-background-color: green; -fx-label-padding: 10px;" text="B" GridPane.columnIndex="1" />
-            <Label fx:id="lbl3" contentDisplay="CENTER" style="-fx-background-color: green; -fx-label-padding: 10px;" text="D" GridPane.columnIndex="3" />
-            <Label fx:id="lbl4" contentDisplay="CENTER" style="-fx-background-color: green; -fx-label-padding: 10px;" text="E" GridPane.rowIndex="1" />
-            <Label fx:id="lbl5" contentDisplay="CENTER" style="-fx-background-color: green; -fx-label-padding: 10px;" text="F" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Label fx:id="lbl6" contentDisplay="CENTER" style="-fx-background-color: green; -fx-label-padding: 10px;" text="G" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-            <Label fx:id="lbl7" contentDisplay="CENTER" style="-fx-background-color: green; -fx-label-padding: 10px;" text="H" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-            <Label fx:id="lbl8" contentDisplay="CENTER" style="-fx-background-color: green; -fx-label-padding: 10px;" text="I" GridPane.rowIndex="2" />
-            <Label fx:id="lbl9" contentDisplay="CENTER" style="-fx-background-color: green; -fx-label-padding: 10px;" text="L" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <Label fx:id="lbl10" contentDisplay="CENTER" style="-fx-background-color: green; -fx-label-padding: 10px;" text="M" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-            <Label fx:id="lbl11" contentDisplay="CENTER" style="-fx-background-color: green; -fx-label-padding: 10px;" text="N" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-            <Label fx:id="lbl12" contentDisplay="CENTER" style="-fx-background-color: green; -fx-label-padding: 10px;" text="O" GridPane.rowIndex="3" />
-            <Label fx:id="lbl13" contentDisplay="CENTER" style="-fx-background-color: green; -fx-label-padding: 10px;" text="P" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <Label fx:id="lbl14" contentDisplay="CENTER" style="-fx-background-color: green; -fx-label-padding: 10px;" text="Q" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-            <Label fx:id="lbl15" contentDisplay="CENTER" style="-fx-background-color: green; -fx-label-padding: 10px;" text="R" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <Label fx:id="lbl2" contentDisplay="CENTER" style="-fx-background-color: green; -fx-label-padding: 10px;" text="C" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <Label fx:id="lbl0" alignment="CENTER" contentDisplay="CENTER" style="-fx-background-color: green; -fx-label-padding: 10px; -fx-pref-width: 20px;" text="A" GridPane.halignment="CENTER" />
+            <Label fx:id="lbl1" contentDisplay="CENTER" style="-fx-background-color: green; -fx-label-padding: 10px;" text="B" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+            <Label fx:id="lbl3" alignment="CENTER" contentDisplay="CENTER" style="-fx-background-color: green; -fx-label-padding: 10px; -fx-background-radius: 10px;" text="D" textFill="WHITE" GridPane.columnIndex="3" GridPane.halignment="CENTER">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <Label fx:id="lbl4" contentDisplay="CENTER" style="-fx-background-color: green; -fx-label-padding: 10px;" text="E" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <Label fx:id="lbl5" contentDisplay="CENTER" style="-fx-background-color: green; -fx-label-padding: 10px;" text="F" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <Label fx:id="lbl6" contentDisplay="CENTER" style="-fx-background-color: green; -fx-label-padding: 10px;" text="G" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <Label fx:id="lbl7" contentDisplay="CENTER" style="-fx-background-color: green; -fx-label-padding: 10px; -fx-font-size: 18px; -fx-text-fill: white;" text="H" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <Label fx:id="lbl8" contentDisplay="CENTER" style="-fx-background-color: green; -fx-label-padding: 10px;" text="I" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+            <Label fx:id="lbl9" contentDisplay="CENTER" style="-fx-background-color: green; -fx-label-padding: 10px;" text="L" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+            <Label fx:id="lbl10" contentDisplay="CENTER" style="-fx-background-color: green; -fx-label-padding: 10px;" text="M" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+            <Label fx:id="lbl11" contentDisplay="CENTER" style="-fx-background-color: green; -fx-label-padding: 10px;" text="N" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+            <Label fx:id="lbl12" contentDisplay="CENTER" style="-fx-background-color: green; -fx-label-padding: 10px;" text="O" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+            <Label fx:id="lbl13" contentDisplay="CENTER" style="-fx-background-color: green; -fx-label-padding: 10px;" text="P" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+            <Label fx:id="lbl14" contentDisplay="CENTER" style="-fx-background-color: green; -fx-label-padding: 10px;" text="Q" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+            <Label fx:id="lbl15" contentDisplay="CENTER" style="-fx-background-color: green; -fx-label-padding: 10px;" text="R" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
          </children>
          <BorderPane.margin>
             <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
@@ -57,9 +64,6 @@
                </VBox.margin>
             </Button>
             <ListView fx:id="listView" prefHeight="183.0" prefWidth="164.0">
-               <padding>
-                  <Insets bottom="20.0" right="20.0" top="20.0" />
-               </padding>
                <VBox.margin>
                   <Insets top="20.0" />
                </VBox.margin>
@@ -85,4 +89,13 @@
          </padding>
       </Label>
    </bottom>
+   <top>
+      <Label text="Lab5_Ruzzle_Solver" textAlignment="CENTER" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <BorderPane.margin>
+            <Insets top="15.0" />
+         </BorderPane.margin></Label>
+   </top>
 </BorderPane>

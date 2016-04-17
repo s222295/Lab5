@@ -18,8 +18,8 @@ public class DBConnect {
 			return connection;
 
 		} catch (SQLException e) {
-			e.printStackTrace();
-			throw new RuntimeException("Errore nella connessione", e);
+//			e.printStackTrace();
+			throw new RuntimeException("Errore nella connessione", null);
 		}
 	}
 

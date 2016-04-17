@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Model {
 
-	public static boolean simpleRandom = true;
+	public static boolean simpleRandom = false;
 
 	public final static int ruzzleMatrixDim = 4;
 	static List<Word> results = new ArrayList<Word>();

@@ -5,8 +5,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
-import javax.management.RuntimeErrorException;
-
 import it.polito.tdp.ruzzle.model.Model;
 import it.polito.tdp.ruzzle.model.Position;
 import it.polito.tdp.ruzzle.model.Word;
@@ -123,6 +121,10 @@ public class RuzzleController {
 		labels.add(lbl13);
 		labels.add(lbl14);
 		labels.add(lbl15);
+		
+		for (Label l : labels)
+			l.setStyle("-fx-background-color: green; -fx-label-padding: 10px;"
+					+ "-fx-font-size: 18px; -fx-text-fill: white; -fx-background-radius: 10px");
 	}
 
 	@FXML
@@ -140,7 +142,9 @@ public class RuzzleController {
 
 		// Reset colore label interfaccia grafica
 		for (Label l : labels)
-			l.setStyle("-fx-background-color: green; -fx-label-padding: 10px");
+			l.setStyle("-fx-background-color: green; -fx-label-padding: 10px;"
+					+ "-fx-font-size: 18px; -fx-text-fill: white; -fx-background-radius: 10px");
+		
 		// Svuota la lista da visualizzare.
 		listView.getItems().clear();
 
@@ -150,7 +154,7 @@ public class RuzzleController {
 			model.solveRuzzle();
 			errorLbl.setText("Finito");
 
-		} catch (RuntimeErrorException e) {
+		} catch (RuntimeException e) {
 			errorLbl.setText("Errore nella connessione al database");
 		}
 
@@ -173,18 +177,24 @@ public class RuzzleController {
 			List<Position> positions = word.getPositions();
 
 			for (Label l : labels)
-				l.setStyle("-fx-background-color: green; -fx-label-padding: 10px");
+				l.setStyle("-fx-background-color: green; -fx-label-padding: 10px;"
+						+ "-fx-font-size: 18px; -fx-text-fill: white; -fx-background-radius: 10px");
 
 			for (Position p : positions) {
 				labels.get(p.getX() * Model.ruzzleMatrixDim + p.getY())
-						.setStyle("-fx-background-color: red; -fx-label-padding: 10px");
+				.setStyle("-fx-background-color: red; -fx-label-padding: 10px;"
+						+ "-fx-font-size: 18px; -fx-text-fill: white; -fx-background-radius: 10px");
 			}
 
 			errorLbl.setText("");
 
 		} else {
-
-			errorLbl.setText("Generate a Ruzzle Matrix!");
+			
+			if (listView.getItems().size() == 0) {
+				errorLbl.setText("Genera una nuova soluzione!");
+			} else {
+				errorLbl.setText("Seleziona una parola dalla lista!");
+			}
 		}
 	}
 

@@ -5,8 +5,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import javax.management.RuntimeErrorException;
-
 public class WordDAO {
 
 	public boolean searchSequence(String sequence) {
@@ -29,7 +27,7 @@ public class WordDAO {
 
 		} catch (SQLException e) {
 			System.out.println("Errore connessione al database");
-			throw new RuntimeErrorException(null, "Error Connection Database");
+			throw new RuntimeException("Error Connection Database AA");
 		}
 	}
 
@@ -54,7 +52,7 @@ public class WordDAO {
 
 		} catch (SQLException e) {
 			System.out.println("Errore connessione al database");
-			throw new RuntimeErrorException(null, "Error Connection Database");
+			throw new RuntimeException("Error Connection Database AA");
 		}
 	}
 
